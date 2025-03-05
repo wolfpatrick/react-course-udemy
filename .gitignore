@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+
+# Build output
+/build
+/dist
+/.next
+/out
+/coverage
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VSCode
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Dependency directories
+/pnpm-debug.log
+/package-lock.json
+/yarn.lock
+
+# Next.js (if you're using it)
+.next/
+
