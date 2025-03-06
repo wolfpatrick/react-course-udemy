@@ -2,6 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
 
+const skillsData = [
+  { skillName: "Python", level: "beginner", color: "#156936" },
+  { skillName: "JavaScript", level: "intermediate", color: "#FFAA00" },
+  { skillName: "React", level: "advanced", color: "#61DAFB" },
+  { skillName: "CSS", level: "beginner", color: "#264de4" },
+  { skillName: "Node.js", level: "intermediate", color: "#68A063" },
+  { skillName: "TypeScript", level: "advanced", color: "#3178C6" },
+];
+
 function App() {
   return (
     <div className="card">
@@ -38,24 +47,60 @@ function Intro() {
   );
 }
 
-function Skill(props) {
+// function Skill(props) {
+//   return (
+//     <div className="skill" style={{ backgroundColor: props.color }}>
+//       <span>{props.skillName}</span>
+//       <span>{props.emoji}</span>
+//     </div>
+//   );
+// }
+
+// function SkillList() {
+//   return (
+//     <div className="skill-list">
+//       <Skill skillName="Java Script" color="lorange" emoji="💪" />
+//       <Skill skillName="Python" color="lightgreen" emoji="💪" />
+//       <Skill skillName="Git" color="orangered" emoji="💪" />
+//       <Skill skillName="Cypress" color="yellow" emoji="💪" />
+//       <Skill skillName="React" color="lightblue" emoji="💪" />
+//     </div>
+//   );
+// }
+
+function Skill({ skillName, color, level }) {
+  let emoji = "";
+
+  // if (level === "beginner") {
+  //   emoji = "😺";
+  // } else if (level === "intermediate") {
+  //   emoji = "🤓";
+  // } else if (level === "advanced") {
+  //   emoji = "💪";
+  // }
+
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skillName}</span>
-      <span>{props.emoji}</span>
-    </div>
+    <li className="skill" style={{ backgroundColor: `${color}` }}>
+      <span>{skillName}</span>
+      <span>{level === "beginner" && "😺"}</span>
+      <span>{level === "intermediate" && "🤓"}</span>
+      <span>{level === "advanced" && "💪"}</span>
+    </li>
   );
 }
 
 function SkillList() {
+  const skills = skillsData;
   return (
-    <div className="skill-list">
-      <Skill skillName="Java Script" color="lorange" emoji="💪" />
-      <Skill skillName="Python" color="lightgreen" emoji="💪" />
-      <Skill skillName="Git" color="orangered" emoji="💪" />
-      <Skill skillName="Cypress" color="yellow" emoji="💪" />
-      <Skill skillName="React" color="lightblue" emoji="💪" />
-    </div>
+    <ul className="skill-list">
+      {skills.map((skillObj) => (
+        <Skill
+          skillName={skillObj.skillName}
+          color={skillObj.color}
+          level={skillObj.level}
+        />
+      ))}
+    </ul>
   );
 }
 
