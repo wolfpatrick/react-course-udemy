@@ -52,6 +52,7 @@ function Intro() {
 //     <div className="skill" style={{ backgroundColor: props.color }}>
 //       <span>{props.skillName}</span>
 //       <span>{props.emoji}</span>
+//       <span>{props.emoji}</span>
 //     </div>
 //   );
 // }
