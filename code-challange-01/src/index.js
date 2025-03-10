@@ -75,7 +75,7 @@ function Skill({ skillName, color, level }) {
   // if (level === "beginner") {
   //   emoji = "😺";
   // } else if (level === "intermediate") {
-  //   emoji = "🤓";
+  //   emoji = "🤓-";
   // } else if (level === "advanced") {
   //   emoji = "💪";
   // }
