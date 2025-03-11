@@ -21,7 +21,7 @@ export default function App() {
       <div className="numbers">
         <div className={`${step >= 1 ? "actice" : ""}`}>1</div>
         <div className={`${step >= 2 ? "actice" : ""}`}>2</div>
-        <div className={`${step >= 3 ? "actice" : ""}`}>3</div>
+        <div className={`${step >= 3 ? "actice" : ""}`}>33</div>
       </div>
   
       <p className="message">
