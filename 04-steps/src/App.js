@@ -13,6 +13,7 @@ export default function App() {
 
   const hanndleNext = () => {
     alert("next 111 ");
+    console.log("next")
   };
 
   return (
@@ -22,7 +23,7 @@ export default function App() {
         <div className={`${step >= 2 ? "actice" : ""}`}>2</div>
         <div className={`${step >= 3 ? "actice" : ""}`}>3</div>
       </div>
-
+  
       <p className="message">
         Step {step}: {messages[step - 1]}
       </p>
