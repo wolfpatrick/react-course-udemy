@@ -1,4 +1,3 @@
-import { logDOM } from "@testing-library/dom";
 import { useState } from "react";
 
 const messages = [
@@ -12,12 +11,11 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(true);
 
   function hanndlePrevious(text) {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((s) => s - 1);
   }
 
   const hanndleNext = () => {
-    if (step < 3) setStep(step + 1);
-    console.log("next");
+    if (step < 3) setStep((s) => s + 1);
   };
 
   const closebutton = (
@@ -43,7 +41,7 @@ export default function App() {
           <div className="buttons">
             <button
               style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={() => hanndlePrevious("patrick")}
+              onClick={() => hanndlePrevious}
             >
               Previos
             </button>
