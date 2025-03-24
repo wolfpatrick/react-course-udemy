@@ -32,6 +32,15 @@ function Counter() {
     setStep((s) => s - 1);
   };
 
+  let msg;
+  if (count > 0) {
+    msg = <p>Coint greater 0</p>;
+  } else if (count == 0) {
+    msg = <p>Coint equal 0</p>;
+  } else {
+    msg = <p>Coutn less 0</p>;
+  }
+
   return (
     <div>
       <div>
@@ -45,6 +54,8 @@ function Counter() {
         <span>Count {count}</span>
         <button onClick={increaseCount}>+</button>
       </div>
+
+      {msg}
 
       <span>
         {count === 0
